@@ -37,22 +37,22 @@ Created calculated columns for:
 -  Applied income binning strategy for segmentation analysis.
 
 🔹 Advanced DAX Measures
-Total Clients
+- Total Clients
 Total Clients = DISTINCTCOUNT('Clients - Banking'[Client ID])
 
-Total Loan
+- Total Loan
 Total Loan = [Bank Loan] + [Business Lending] + [Credit Cards Balance]
 
 
-Total Deposit
+- Total Deposit
 Total Deposit = [Bank Deposit] + [Savings Account] + [Foreign Currency Account] + [Checking Accounts]
 
 
-Total Fees
+- Total Fees
 Total Fees = SUMX('Clients - Banking', [Total Loan] * 'Clients - Banking'[Processing Fees])
 
 
-Engagement Days
+- Engagement Days
 Engagement Days = DATEDIFF('Clients - Banking'[Joined Bank], TODAY(), DAY)
 
 📊 Key Business KPIs
